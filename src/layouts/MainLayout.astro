@@ -1,7 +1,8 @@
 ---
 import "../styles/style.css";
+import "../scripts/main.js";
 import Navigation from "../components/Navigation.astro";
-const { title } = Astro.props;
+const { title, javascript } = Astro.props;
 ---
 
 <html lang="en">
@@ -24,5 +25,6 @@ const { title } = Astro.props;
     </main>
 
     <footer></footer>
+    <script src="../scripts/main.js"></script>
   </body>
 </html>

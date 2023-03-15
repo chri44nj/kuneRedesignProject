@@ -3,23 +3,27 @@ const { artistImg, hashtag, hashtag2, hashtag3, artistName, artistCountry, artis
 ---
 
 <div class="artistCard">
-  <img class="artistImg" src={artistImg} alt="" />
+  <a href="/#"><img class="artistImg" src={artistImg} alt="" /></a>
   <div class="horisontalFlex">
     <p>#{hashtag}&nbsp;</p>
     <p>#{hashtag2}&nbsp;</p>
     <p>#{hashtag3}&nbsp;</p>
   </div>
-  <h3 class="artistName">{artistName} ({artistCountry})</h3>
+  <a href="/#"><h3 class="artistName">{artistName} ({artistCountry})</h3></a>
   <div class="horisontalFlex">
-    <p class="artistDate">{artistDate}&nbsp;</p>
-    <p class="artistTime">{artistTime}</p>
+    <p class="artistDate">{artistDate}&nbsp;-</p>
+    <p class="artistTime">&nbsp;{artistTime}</p>
   </div>
 </div>
 
 <style>
+  a {
+    text-decoration: none;
+    color: #2d2c2a;
+  }
   .artistCard {
     background-color: lightskyblue;
-    width: 250px;
+    width: auto;
     padding: 1rem;
     font-family: "Lato";
   }

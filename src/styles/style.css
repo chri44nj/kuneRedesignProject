@@ -12,6 +12,7 @@ img {
 }
 
 body {
+  padding-top: 80px;
   line-height: 1.5;
 }
 
@@ -21,7 +22,11 @@ main {
 
 /***** Index *****/
 .artistSection {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
+}
+
+#program {
+  padding-top: 3rem;
 }
