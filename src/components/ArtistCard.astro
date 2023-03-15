@@ -1,0 +1,39 @@
+---
+const { artistImg, hashtag, hashtag2, hashtag3, artistName, artistCountry, artistDate, artistTime } = Astro.props;
+---
+
+<div class="artistCard">
+  <img class="artistImg" src={artistImg} alt="" />
+  <div class="horisontalFlex">
+    <p>#{hashtag}&nbsp;</p>
+    <p>#{hashtag2}&nbsp;</p>
+    <p>#{hashtag3}&nbsp;</p>
+  </div>
+  <h3 class="artistName">{artistName} ({artistCountry})</h3>
+  <div class="horisontalFlex">
+    <p class="artistDate">{artistDate}&nbsp;</p>
+    <p class="artistTime">{artistTime}</p>
+  </div>
+</div>
+
+<style>
+  .artistCard {
+    background-color: lightskyblue;
+    width: 250px;
+    padding: 1rem;
+    font-family: "Lato";
+  }
+
+  .artistImg {
+  }
+
+  .horisontalFlex {
+    display: flex;
+  }
+
+  .artistDate {
+  }
+
+  .artistTime {
+  }
+</style>

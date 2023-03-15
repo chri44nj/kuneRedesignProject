@@ -1,0 +1,72 @@
+---
+import Button from "./Button.astro";
+---
+
+<nav>
+  <div class="logo">
+    <a href="index.html">LOGO</a>
+    <div>
+      <p>Kune</p>
+      <p>Festival</p>
+    </div>
+  </div>
+  <div class="navItems">
+    <a href="aboutus">About Us</a>
+    <a href="index.html#program">Program 2023</a>
+    <a href="information">Practical Info</a>
+    <a href="food_drinks">Food & Drinks</a>
+    <a href="volunteer"></a>
+  </div>
+  <div class="icons">
+    <a href="login">Login</a>
+    <a href="">Basket</a>
+    <a href="booking"><Button variant="primary" size="small">BOOKING</Button></a>
+  </div>
+</nav>
+
+<style>
+  * {
+    text-decoration: none;
+
+    font-weight: bold;
+  }
+
+  a {
+    color: #2d2c2a;
+  }
+
+  a:hover {
+    color: #1a4ede;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Lato";
+    padding-block: 1rem;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 250px;
+    padding-left: 2rem;
+  }
+
+  .navItems {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    width: 250px;
+    padding-right: 2rem;
+  }
+</style>

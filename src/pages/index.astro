@@ -1,15 +1,27 @@
 ---
+import "../styles/style.css";
+import MainLayout from "../layouts/MainLayout.astro";
+import ArtistCard from "../components/ArtistCard.astro";
+import Button from "../components/Button.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Home">
+  <article class="artistSection">
+    <ArtistCard artistImg="img/squareImg.jfif" hashtag="music" hashtag2="space" hashtag3="hashtag" artistName="Hipster Musician" artistCountry="DK" artistDate="19/7" artistTime="12:00-14:00" />
+    <ArtistCard artistImg="img/squareImg2.jpg" hashtag="art" hashtag2="amphi" hashtag3="hashtag" artistName="Hipster Artist" artistCountry="UK" artistDate="20/7" artistTime="00:00-02:00" />
+    <ArtistCard artistImg="img/squareImg.jfif" hashtag="music" hashtag2="space" hashtag3="hashtag" artistName="Hipster Musician" artistCountry="DK" artistDate="19/7" artistTime="12:00-14:00" />
+    <ArtistCard artistImg="img/squareImg2.jpg" hashtag="art" hashtag2="amphi" hashtag3="hashtag" artistName="Hipster Artist" artistCountry="UK" artistDate="20/7" artistTime="00:00-02:00" />
+  </article>
+  <Button variant="primary" size="large">CLICK</Button>
+  <Button variant="secondary" size="medium">CLICK</Button>
+  <Button variant="tertiary" size="small">CLICK</Button>
+  <h2>HEY</h2>
+  <h2>HEY</h2>
+  <h2>HEY</h2>
+  <h2>HEY</h2>
+  <h2>HEY</h2>
+  <h2>HEY</h2>
+  <h2>HEY</h2>
+  <h2>HEY</h2>
+  <section id="program">PROGRAM</section>
+</MainLayout>

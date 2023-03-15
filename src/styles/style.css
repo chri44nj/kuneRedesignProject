@@ -1,0 +1,27 @@
+/***** GENERAL *****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+main {
+  margin-inline: 10%;
+}
+
+/***** Index *****/
+.artistSection {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
