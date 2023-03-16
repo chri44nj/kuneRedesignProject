@@ -1,18 +1,18 @@
 ---
-const { artistImg, hashtag, hashtag2, hashtag3, artistName, artistCountry, artistDate, artistTime } = Astro.props;
+const { data } = Astro.props;
 ---
 
 <div class="artistCard">
-  <a href="/#"><img class="artistImg" src={artistImg} alt="" /></a>
-  <div class="horisontalFlex">
-    <p>#{hashtag}&nbsp;</p>
-    <p>#{hashtag2}&nbsp;</p>
-    <p>#{hashtag3}&nbsp;</p>
+  <a href="/#"><img src={data.image} alt="artist image" /></a>
+  <div class="horizontalFlex hashtags">
+    <p>#{data.hashtag}</p>
+    <p>#{data.hashtag2}</p>
+    <p>#{data.hashtag3}</p>
   </div>
-  <a href="/#"><h3 class="artistName">{artistName} ({artistCountry})</h3></a>
-  <div class="horisontalFlex">
-    <p class="artistDate">{artistDate}&nbsp;-</p>
-    <p class="artistTime">&nbsp;{artistTime}</p>
+  <a href="/#"><h3>{data.name} ({data.nationality})</h3></a>
+  <div class="horizontalFlex info">
+    <p>{data.date}&nbsp;-</p>
+    <p>&nbsp;{data.time}</p>
   </div>
 </div>
 
@@ -22,22 +22,17 @@ const { artistImg, hashtag, hashtag2, hashtag3, artistName, artistCountry, artis
     color: #2d2c2a;
   }
   .artistCard {
-    background-color: lightskyblue;
     width: auto;
-    padding: 1rem;
-    font-family: "Lato";
+    font-family: "Montserrat";
+  }
+  .hashtags p {
+    background-color: #e5f793;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-inline: 5px;
   }
 
-  .artistImg {
-  }
-
-  .horisontalFlex {
-    display: flex;
-  }
-
-  .artistDate {
-  }
-
-  .artistTime {
+  .info {
+    font-weight: bold;
   }
 </style>

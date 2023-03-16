@@ -1,0 +1,86 @@
+---
+import Button from "./Button.astro";
+---
+
+<header>
+  <nav>
+    <div class="logo">
+      <a href="index.html">LOGO</a>
+      <div>
+        <p>KUNE</p>
+        <p>FESTIVAL</p>
+      </div>
+    </div>
+    <div class="navItems">
+      <a href="/#program">Program 2023</a>
+      <a href="food_drinks">Food // Drinks</a>
+      <a href="information">Info</a>
+      <a href="volunteer">Volunteer</a>
+      <a href="aboutus">About Us</a>
+    </div>
+    <div class="icons">
+      <a href="login"><i class="fa-solid fa-user"></i></a>
+      <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="booking"><Button variant="primary" size="small">BOOKING</Button></a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  * {
+    text-decoration: none;
+
+    font-weight: bold;
+  }
+
+  a {
+    color: #1a4ede;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: #2d2c2a;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #e5f793;
+    font-family: "Montserrat";
+  }
+
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 250px;
+    padding-left: 2rem;
+    color: #1a4ede;
+  }
+
+  .navItems {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    width: 250px;
+    padding-right: 2rem;
+  }
+</style>

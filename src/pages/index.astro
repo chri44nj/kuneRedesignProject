@@ -3,18 +3,31 @@ import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import ArtistCard from "../components/ArtistCard.astro";
 import Button from "../components/Button.astro";
+import Ticket from "../components/Ticket.astro";
+
+const data = await fetch("https://zadcnepblqcmzlxelrhb.supabase.co/rest/v1/artists", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InphZGNuZXBibHFjbXpseGVscmhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg4OTAzMTAsImV4cCI6MTk5NDQ2NjMxMH0.kI4z8TZt2TNdOSDku4oWLr3MsZQti7pRGfPc4traZp0",
+  },
+}).then((res) => res.json());
+
+console.log(data);
 ---
 
 <MainLayout title="">
-  <section id="program"><h2>PROGRAM 2023</h2></section>
-  <article class="artistSection">
-    <ArtistCard artistImg="img/squareImg.jfif" hashtag="music" hashtag2="space" hashtag3="hashtag" artistName="Hipster Musician" artistCountry="DK" artistDate="19/7" artistTime="12:00-14:00" />
-    <ArtistCard artistImg="img/squareImg2.jpg" hashtag="art" hashtag2="amphi" hashtag3="hashtag" artistName="Hipster Artist" artistCountry="UK" artistDate="20/7" artistTime="00:00-02:00" />
-    <ArtistCard artistImg="img/squareImg.jfif" hashtag="music" hashtag2="space" hashtag3="hashtag" artistName="Hipster Musician" artistCountry="DK" artistDate="19/7" artistTime="12:00-14:00" />
-    <ArtistCard artistImg="img/squareImg2.jpg" hashtag="art" hashtag2="amphi" hashtag3="hashtag" artistName="Hipster Artist" artistCountry="UK" artistDate="20/7" artistTime="00:00-02:00" />
-    <ArtistCard artistImg="img/squareImg.jfif" hashtag="music" hashtag2="space" hashtag3="hashtag" artistName="Hipster Musician" artistCountry="DK" artistDate="19/7" artistTime="12:00-14:00" />
-    <ArtistCard artistImg="img/squareImg2.jpg" hashtag="art" hashtag2="amphi" hashtag3="hashtag" artistName="Hipster Artist" artistCountry="UK" artistDate="20/7" artistTime="00:00-02:00" />
-    <ArtistCard artistImg="img/squareImg.jfif" hashtag="music" hashtag2="space" hashtag3="hashtag" artistName="Hipster Musician" artistCountry="DK" artistDate="19/7" artistTime="12:00-14:00" />
-    <ArtistCard artistImg="img/squareImg2.jpg" hashtag="art" hashtag2="amphi" hashtag3="hashtag" artistName="Hipster Artist" artistCountry="UK" artistDate="20/7" artistTime="00:00-02:00" />
-  </article>
+  <h2 id="program">PROGRAM 2023</h2>
+  <section class="artistSection">
+    {
+      data.map((artist) => {
+        return <ArtistCard data={artist} />;
+      })
+    }
+  </section>
+  <h2 id="booking">BOOKING</h2>
+  <section class="ticketSection">
+    <Ticket type="PARTOUT" date="19th-23rd" />
+  </section>
 </MainLayout>
+
+<style></style>

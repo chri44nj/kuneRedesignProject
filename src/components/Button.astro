@@ -6,25 +6,31 @@ const { variant, size } = Astro.props;
 
 <style>
   button {
-    padding: 1rem;
+    padding-block: 10px;
+    padding-inline: 20px;
     border: 0;
-    border-radius: 10px;
     cursor: pointer;
   }
 
   button:hover {
-    background-color: #1a4ede;
+    background-color: #2d2c2a;
+    border: 2px solid #2d2c2a;
     color: #eaeaea;
   }
 
   .primary {
-    background-color: #2d2c2a;
-    color: #eaeaea;
+    background-color: #e5f793;
+    color: #1a4ede;
+    font-weight: bold;
+    border: 2px solid #1a4ede;
+    border-radius: 10px;
   }
 
   .secondary {
-    background-color: #eaeaea;
-    color: #2d2c2a;
+    background-color: #2d2c2a;
+    color: #e5f793;
+    font-weight: bold;
+    border: 2px solid #2d2c2a;
   }
 
   .small {
