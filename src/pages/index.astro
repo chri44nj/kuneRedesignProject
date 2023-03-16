@@ -17,6 +17,29 @@ console.log(data);
 
 <MainLayout title="">
   <h2 id="program">PROGRAM 2023</h2>
+  <div class="horizontalFlex categories">
+    <h3><span class="selected">All</span></h3>
+    <div class="verticalLine"></div>
+    <h3>Music</h3>
+    <h3>Art</h3>
+    <h3>Workshops</h3>
+  </div>
+  <div class="horizontalFlex datesStages">
+    <div class="horizontalFlex dates">
+      <h4>19/07</h4>
+      <h4>20/07</h4>
+      <h4>21/07</h4>
+      <h4>22/07</h4>
+      <h4>23/07</h4>
+    </div>
+    <div class="horizontalFlex stages">
+      <h4>Space</h4>
+      <h4>Vessel</h4>
+      <h4>Astral</h4>
+      <h4>Beach</h4>
+      <h4>Amphi</h4>
+    </div>
+  </div>
   <section class="artistSection">
     {
       data.map((artist) => {
@@ -25,9 +48,56 @@ console.log(data);
     }
   </section>
   <h2 id="booking">BOOKING</h2>
+  <div class="horizontalFlex categories">
+    <h3><span class="selected">Tickets</span></h3>
+    <h3>Camping</h3>
+    <h3>Ferry</h3>
+  </div>
   <section class="ticketSection">
-    <Ticket type="PARTOUT" date="19th-23rd" />
+    <Ticket type="PARTOUT" date="19th - 23rd" />
+    <Ticket type="DAY PASS" date="19th" />
+    <Ticket type="DAY PASS" date="20th" />
+    <Ticket type="DAY PASS" date="21st" />
   </section>
 </MainLayout>
 
-<style></style>
+<style>
+  .verticalLine {
+    background-color: #2d2c2a;
+    height: 35px;
+    width: 2px;
+  }
+
+  .categories {
+    font-size: 2rem;
+    gap: 1rem;
+    font-family: "Montserrat";
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  .datesStages {
+    gap: 5rem;
+    justify-content: center;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+  .dates {
+    gap: 1rem;
+    font-family: "Montserrat";
+  }
+  .stages {
+    gap: 1rem;
+    font-family: "Montserrat";
+  }
+
+  h3:hover,
+  h4:hover {
+    cursor: pointer;
+    color: #1a4ede;
+  }
+
+  .selected {
+    color: #1a4ede;
+  }
+</style>

@@ -29,6 +29,7 @@ h2 {
 /***** REUSABLES *****/
 .horizontalFlex {
   display: flex;
+  align-items: center;
 }
 
 .verticalFlex {

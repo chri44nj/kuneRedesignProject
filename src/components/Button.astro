@@ -1,8 +1,8 @@
 ---
-const { variant, size } = Astro.props;
+const { variant, size, extra } = Astro.props;
 ---
 
-<button class={variant + " " + size}><slot /></button>
+<button class={variant + " " + size + " " + extra}><slot /></button>
 
 <style>
   button {
@@ -43,5 +43,9 @@ const { variant, size } = Astro.props;
 
   .large {
     font-size: 2rem;
+  }
+
+  .margin {
+    margin-top: 2rem;
   }
 </style>
