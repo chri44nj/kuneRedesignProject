@@ -50,4 +50,14 @@ const { variant, size, extra } = Astro.props;
   .margin {
     margin-top: 2rem;
   }
+
+  @media only screen and (max-width: 600px) {
+    .medium {
+      font-size: 1.25rem;
+    }
+
+    .small {
+      font-size: 0.8rem;
+    }
+  }
 </style>

@@ -11,7 +11,7 @@ const { type, date } = Astro.props;
     <p class="year">2023</p>
     <Button variant="secondary" size="medium" extra="margin">BUY TICKETS</Button>
   </div>
-  <p>UNGDOMSØEN</p>
+  <p class="location">UNGDOMSØEN</p>
 </div>
 
 <style>
@@ -38,5 +38,33 @@ const { type, date } = Astro.props;
 
   .year {
     font-size: 1.25rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .ticket {
+      padding-block: 2rem;
+      height: 60vh;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .month,
+    .date {
+      font-size: 1.5rem;
+    }
+
+    .year {
+      font-size: 1rem;
+    }
+
+    .location {
+      font-size: 0.75rem;
+    }
+
+    .medium {
+      font-size: 1rem;
+    }
   }
 </style>

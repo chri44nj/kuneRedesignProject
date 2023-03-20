@@ -3,14 +3,14 @@
 
 <footer>
   <div class="footerContent">
-    <ul>
+    <ul class="footerItems">
       <li><a href="">Contact Us</a></li>
       <li><a href="">Practical Information</a></li>
       <li><a href="">Volunteer</a></li>
       <li><a href="">Information for Artists</a></li>
       <li><a href="">Cookie Policy</a></li>
     </ul>
-    <a href="index.html">LOGO</a>
+    <a class="logo" href="index.html"><img src="/img/logo.svg" alt="" /></a>
     <div class="verticalFlex">
       <p>FOLLOW KUNE FESTIVAL</p>
       <div class="someIcons">
@@ -40,6 +40,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .logo {
+    width: 10%;
   }
 
   ul {
@@ -72,5 +76,31 @@
     display: flex;
     gap: 1.5rem;
     font-size: 2.5rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .footerContent {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .footerItems {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    ul li {
+      padding-block: 0rem;
+    }
+
+    .logo {
+      width: 25%;
+    }
+
+    .rights {
+      font-size: 0.8rem;
+    }
   }
 </style>
