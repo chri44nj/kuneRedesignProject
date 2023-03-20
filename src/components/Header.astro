@@ -12,16 +12,21 @@ import Button from "./Button.astro";
       </div>
     </div>
     <div class="navItems">
-      <a href="/#program">Program 2023</a>
-      <a href="food_drinks">Food // Drinks</a>
-      <a href="information">Info</a>
-      <a href="volunteer">Volunteer</a>
-      <a href="aboutus">About Us</a>
+      <a class="navItem" href="/#program">Program 2023</a>
+      <a class="navItem" href="food_drinks">Food // Drinks</a>
+      <a class="navItem" href="information">Info</a>
+      <a class="navItem" href="volunteer">Volunteer</a>
+      <a class="navItem" href="aboutus">About Us</a>
     </div>
     <div class="icons">
       <a href="login"><i class="fa-solid fa-user"></i></a>
       <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
       <a href="booking"><Button variant="primary" size="small">BOOKING</Button></a>
+      <div class="burgerMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
   </nav>
 </header>
@@ -87,5 +92,57 @@ import Button from "./Button.astro";
     gap: 1rem;
     width: 250px;
     padding-right: 2rem;
+  }
+
+  .burgerMenu {
+    display: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #1a4ede;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .burgerMenu {
+      display: block;
+    }
+
+    .burgerMenu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burgerMenu.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(50deg);
+    }
+    .burgerMenu.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-50deg);
+    }
+
+    .navItems {
+      position: fixed;
+      left: -100%;
+      top: 100px;
+      gap: 0.5rem;
+      flex-direction: column;
+      background-color: #e5f793;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      padding-bottom: 1rem;
+    }
+
+    .navItems.active {
+      left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
   }
 </style>
