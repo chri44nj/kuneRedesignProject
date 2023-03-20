@@ -3,9 +3,9 @@ const { data } = Astro.props;
 ---
 
 <div class="artistCard">
-  <div class="artistImage">
+  <div class="artistImageCard">
     <a class="spotifyLogo" target="_blank" href={data.spotify}><img src="img/spotifyLogo.png" alt="spotify link" /></a>
-    <a href={`${data.slug}`}><img src={data.image} alt="artist image" /></a>
+    <a class="artistImage" href={`${data.slug}`}><img src={data.image} alt="artist image" /></a>
   </div>
 
   <div class="horizontalFlex hashtags">
@@ -15,7 +15,7 @@ const { data } = Astro.props;
   </div>
 
   <a href={`${data.slug}`}>
-    <h3>{data.name}</h3>
+    <h3 class="artistName">{data.name}</h3>
   </a>
 
   <div class="horizontalFlex info">
@@ -46,8 +46,12 @@ const { data } = Astro.props;
     opacity: 75%;
   }
 
-  .artistImage {
+  .artistImageCard {
     position: relative;
+  }
+
+  .artistName:hover {
+    color: #1a4ede;
   }
 
   .hashtags {
