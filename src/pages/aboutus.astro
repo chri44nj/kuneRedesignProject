@@ -5,15 +5,57 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="About Us">
-  <Button variant="primary" size="large">CLICK</Button>
-  <Button variant="secondary" size="medium">CLICK</Button>
-  <Button variant="tertiary" size="small">CLICK</Button>
-  <h2>HEY</h2>
-  <h2>HEY</h2>
-  <h2>HEY</h2>
-  <h2>HEY</h2>
-  <h2>HEY</h2>
-  <h2>HEY</h2>
-  <h2>HEY</h2>
-  <h2>HEY</h2>
+  <h3>Being at KUNE Festival is an immersive experience that blends art, music and the Island's natural beauty.</h3>
+  <div class="aboutUsGrid">
+    <div>
+      <p>The location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience representative of the modern, young Nordic artistic community.</p>
+      <h3>Our Vision</h3>
+      <p>
+        Most importantly, we strive to build an environment that values and celebrates what we call the ‘Otherness’ of the world. The Otherness is a concept that acknowledges the existence of people who may be similar to us in many ways yet possess traits, values, and characteristics that set them apart as “other.” Humans share a great deal in common, but we are also remarkably diverse regarding cultural or social norms, habits, or behavior. The Otherness element recognizes this diversity and encourages us to acknowledge, appreciate, and celebrate our differences. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam incidunt laboriosam nobis quam corporis, quis, animi debitis maxime nihil obcaecati, aliquam velit molestias. Ad tenetur velit magnam repellat nesciunt?
+      </p>
+    </div>
+    <div>
+      <img src="../img/aboutUsMood.jpg" alt="" />
+      <h4>“ The art & the music creates a holistic cultural experience that represents the modern, young Nordic artistic community. ”</h4>
+    </div>
+  </div>
+  <p>By embracing the Otherness, we create a more inclusive, compassionate, and open-minded world. Rather than viewing differences as a source of conflict or division, we recognize them as a source of strength and beauty. The Otherness element invites us to see the world through the eyes of others, to listen to their stories, and to appreciate their unique perspectives. In doing so, we expand our horizons and gain a more complex understanding of what it means to be human.</p>
+  <h3>KUNE Festival is an NGO</h3>
+  <p>On the more practical side of things, KUNE Festival is an NGO made up of over 30 passionate and dedicated individuals who work voluntarily year-round to create this extraordinary experience. Our team is comprised of artists, musicians, designers, writers, project managers, and cultural enthusiasts, all united by our shared vision and values. We are motivated by the belief that art and culture have the power to create positive change in the world, and we are committed to working towards this goal by creating a unique platform that celebrates the Nordic underground talent. Our team is inspired by the creative community that we are building, and we are continually amazed by the skills and dedication of our members.</p>
+  <h3>The Location</h3>
+  <div class="aboutUsGrid">
+    <p>The island is a decommissioned defense fort built in the 19th century. A unique landmark with historical value, the fort-island was recently renovated and repurposed into a place dedicated to young people and innovative cultural initiatives. It can host 2500 people, 1000 of which could be accommodated in the camping area.Traveling to KUNE Festival by boat for a 30-minute journey to an island location adds a unique and significant element to the festival experience. Reaching the festival site by boat separates us from our everyday lives and creates a sense of escape to a new world. The festival island becomes a self-contained microcosm where everyone is living, breathing, and experiencing the festival together.</p>
+    <p>This close-knit community setting creates a petri dish for social interactions, where we can connect and bond in a way that is impossible in our everyday lives.This unique location provides a striking contrast between its historical purpose of aggression and its current function as a hub for a cultural celebration. The island’s transformation into a place dedicated to youth and innovative cultural initiatives highlights the shift from conflict to community and symbolizes hope and possibility. By hosting the festival on this historic site, we aim to offer a powerful reminder of the positive impact art and culture can have on society and their role in bringing people together and fostering understanding and connection.</p>
+  </div>
+  <img src="../img/aboutUsBottom.jpg" alt="" />
 </MainLayout>
+
+<style>
+  * {
+    font-family: "Montserrat";
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    max-width: 800px;
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h3,
+  img {
+    margin-bottom: 1rem;
+  }
+  .aboutUsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+</style>
