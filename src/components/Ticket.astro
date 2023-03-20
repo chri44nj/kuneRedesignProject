@@ -8,7 +8,7 @@ const { type, date } = Astro.props;
   <div class="verticalFlex info">
     <p class="month">JULY</p>
     <p class="date">{date}</p>
-    <p>2023</p>
+    <p class="year">2023</p>
     <Button variant="secondary" size="medium" extra="margin">BUY TICKETS</Button>
   </div>
   <p>UNGDOMSØEN</p>
@@ -28,11 +28,15 @@ const { type, date } = Astro.props;
   }
 
   h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .month,
   .date {
     font-size: 2rem;
+  }
+
+  .year {
+    font-size: 1.25rem;
   }
 </style>

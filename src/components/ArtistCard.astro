@@ -7,9 +7,9 @@ const { data } = Astro.props;
   <div class="horizontalFlex hashtags">
     <p>#{data.hashtag}</p>
     <p>#{data.hashtag2}</p>
-    <p>#{data.hashtag3}</p>
+    <p>#{data.nationality}</p>
   </div>
-  <a href="/#"><h3>{data.name} ({data.nationality})</h3></a>
+  <a href="/#"><h3>{data.name}</h3></a>
   <div class="horizontalFlex info">
     <p>{data.date}&nbsp;//</p>
     <p>&nbsp;{data.time}</p>
@@ -32,7 +32,14 @@ const { data } = Astro.props;
     padding-inline: 5px;
   }
 
+  h3 {
+    font-size: 1.5rem;
+    font-family: "Dance";
+    letter-spacing: 1px;
+  }
+
   .info {
     font-weight: bold;
+    font-size: 1.1rem;
   }
 </style>

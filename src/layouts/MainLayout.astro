@@ -12,6 +12,9 @@ const { title, javascript } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b91707f180.js" crossorigin="anonymous"></script>
     <title>{title}</title>
   </head>
@@ -29,3 +32,9 @@ const { title, javascript } = Astro.props;
     <Footer />
   </body>
 </html>
+
+<style>
+  body {
+    /* background: url(../img/background.webp) fixed center; */
+  }
+</style>
