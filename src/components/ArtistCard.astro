@@ -3,7 +3,10 @@ const { data } = Astro.props;
 ---
 
 <div class="artistCard">
-  <a href="/#"><img src={data.image} alt="artist image" /></a>
+  <div class="artistImage">
+    <a class="spotifyLogo" target="_blank" href={data.spotify}><img src="img/spotifyLogo.png" alt="spotify link" /></a>
+    <a href="/#"><img src={data.image} alt="artist image" /></a>
+  </div>
   <div class="horizontalFlex hashtags">
     <p>#{data.hashtag}</p>
     <p>#{data.hashtag2}</p>
@@ -24,6 +27,22 @@ const { data } = Astro.props;
   .artistCard {
     width: auto;
     font-family: "Montserrat";
+  }
+
+  .spotifyLogo {
+    position: absolute;
+    width: 25%;
+    top: 75%;
+    left: 65%;
+    cursor: pointer;
+  }
+
+  .spotifyLogo:hover {
+    opacity: 75%;
+  }
+
+  .artistImage {
+    position: relative;
   }
 
   .hashtags {

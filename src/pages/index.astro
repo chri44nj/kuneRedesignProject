@@ -13,7 +13,8 @@ const data = await fetch("https://zadcnepblqcmzlxelrhb.supabase.co/rest/v1/artis
 console.log(data);
 ---
 
-<MainLayout title="">
+<MainLayout title="A Celebration of Togetherness">
+  <img src="../img/aboutUsBottom.jpg" alt="" />
   <h2 id="program">PROGRAM 2023</h2>
   <div class="horizontalFlex categories">
     <h3><span class="selected">All</span></h3>
@@ -65,6 +66,7 @@ console.log(data);
     padding-top: 3rem;
     display: flex;
     justify-content: center;
+    scroll-margin-top: 3rem;
   }
 
   .artistSection,
@@ -72,7 +74,7 @@ console.log(data);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
-    padding-top: 2rem;
+    margin-top: 2rem;
   }
   .verticalLine {
     background-color: #2d2c2a;
@@ -103,6 +105,10 @@ console.log(data);
     font-family: "Montserrat";
   }
 
+  h2 {
+    margin-top: 3rem;
+  }
+
   h3:hover,
   h4:hover {
     cursor: pointer;
@@ -131,10 +137,6 @@ console.log(data);
     .artistSection,
     .ticketSection {
       gap: 2rem;
-    }
-
-    h2 {
-      margin-top: 2rem;
     }
 
     h3 {
