@@ -5,14 +5,19 @@ const { data } = Astro.props;
 <div class="artistCard">
   <div class="artistImage">
     <a class="spotifyLogo" target="_blank" href={data.spotify}><img src="img/spotifyLogo.png" alt="spotify link" /></a>
-    <a href="/#"><img src={data.image} alt="artist image" /></a>
+    <a href={`${data.slug}`}><img src={data.image} alt="artist image" /></a>
   </div>
+
   <div class="horizontalFlex hashtags">
     <p>#{data.hashtag}</p>
     <p>#{data.hashtag2}</p>
     <p>#{data.nationality}</p>
   </div>
-  <a href="/#"><h3>{data.name}</h3></a>
+
+  <a href={`${data.slug}`}>
+    <h3>{data.name}</h3>
+  </a>
+
   <div class="horizontalFlex info">
     <p>{data.date}&nbsp;//</p>
     <p>&nbsp;{data.time}</p>
