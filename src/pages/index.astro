@@ -13,8 +13,11 @@ const data = await fetch("https://zadcnepblqcmzlxelrhb.supabase.co/rest/v1/artis
 console.log(data);
 ---
 
-<MainLayout headline="A Celebration of Togetherness" title="KUNE">
-  <img src="../img/aboutUsBottom.jpg" alt="" />
+<MainLayout headline="" title="KUNE">
+  <div class="frontPageGrid">
+    <img class="frontPage" src="img/frontPage.png" alt="" />
+    <h4>MUSIC // ART // COMMUNITY</h4>
+  </div>
   <h2 id="program">PROGRAM 2023</h2>
   <div class="horizontalFlex categories">
     <h3><span class="selected">All</span></h3>
@@ -67,6 +70,21 @@ console.log(data);
     display: flex;
     justify-content: center;
     scroll-margin-top: 3rem;
+  }
+
+  .frontPageGrid {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+  }
+
+  .frontPageGrid h4 {
+    font-size: 2rem;
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+
+  .frontPage {
+    width: 90%;
   }
 
   .artistSection,
